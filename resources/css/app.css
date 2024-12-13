@@ -1,0 +1,227 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    @font-face {
+        font-family: 'BMWGlobal-Bold';
+        src:  url(./../asset/BMWTypeNext-Bold.woff2) format('woff2');
+    }
+    @font-face {
+        font-family: 'BMWGlobal-Light';
+        src: url(./../asset/BMWTypeNext-Light.woff2) format('woff2');
+    }
+    @font-face {
+        font-family: 'BMWGlobal-Regular';
+        src: url(./../asset/BMWTypeNext-Regular.woff2) format('woff2');
+    }
+
+    html {
+        font-family: 'BMWGlobal-Light', sans-serif;
+        @apply text-black/80 text-sm;
+    }
+}
+
+
+@layer components {
+    .accordion-content h2 button {
+        @apply flex items-center justify-between w-full py-5 text-xl uppercase rtl:text-right border-b border-gray-300 gap-3;
+    }
+    .accordion-content-text {
+        @apply py-5 border-b border-gray-300 grid md:grid-cols-2 gap-4;
+    }
+    .accordion-content-text ul {
+        @apply list-inside list-disc space-y-1;
+    }
+    .display-colors {
+        @apply flex flex-col justify-center gap-6;
+    }
+    .display-colors ul {
+        @apply flex items-center gap-2;
+    }
+    .display-colors ul li div {
+        @apply cursor-pointer w-10 h-10 border border-gray-300 drop-shadow-sm hover:drop-shadow-md transition-all duration-150 ease-in;
+    }
+    .content-text-detail ul {
+        @apply list-inside list-disc space-y-1;
+    }
+    .nav-tabs {
+        @apply font-bmwBold text-center bg-white text-black/80 py-6 border-b-4 border-transparent hover:border-blue-600 hover:text-blue-600 hover:bg-transparent rounded-none mx-auto text-base min-w-48 transition-all duration-150 ease-in;
+    }
+    .nav-tabs.active {
+        @apply border-blue-600 text-blue-600;
+    }
+    .vehicle-list {
+        @apply relative md:pl-4;
+    }
+    .vehicle-series {
+        @apply md:absolute md:top-0 md:left-[-4rem] z-0 text-[100px] md:text-[140px] leading-[1] text-gray-300;
+    }
+    .vehicle-cars {
+        @apply md:flex md:flex-wrap gap-4 max-sm:overflow-x-auto max-sm:overflow-y-hidden max-sm:p-4;
+        display: -webkit-box;
+    }
+    .vehicle-car {
+        @apply w-64 p-4 transition-all duration-150 ease-in cursor-pointer hover:scale-110 md:hover:scale-[1.2] hover:drop-shadow-md hover:bg-gray-50;
+    }
+    .vehicle-car .buttons {
+        @apply py-2 w-full rounded-none font-bmwBold transition-all duration-150 invisible opacity-0;
+    }
+    .offering-contents {
+        @apply space-y-4;
+    }
+    .offering-contents ul {
+        @apply list-inside list-disc space-y-1;
+    }
+    .pagination {
+        @apply flex items-center justify-end -space-x-px h-8 text-sm gap-2;
+    }
+    .pagination li a {
+        @apply flex items-center justify-center px-3 h-8 font-bmwRegular text-gray-500 bg-blue-50 border border-transparent rounded-md transition-all duration-150 ease-in hover:bg-blue-200 hover:border-blue-200;
+    }
+    .pagination li a.active {
+        @apply z-10 flex items-center justify-center px-3 h-8 text-gray-100 border border-blue-300 bg-blue-500 hover:bg-blue-600 hover:text-gray-100;
+    }
+    .stepper-form {
+        @apply py-10;
+    }
+    .stepper-form .tabs {
+        @apply md:max-w-[80%] mx-auto my-8;
+    }
+    .stepper-form .tabs ol {
+        @apply flex items-center w-full mb-4 sm:mb-5;
+    }
+    .stepper-form .tabs ol li:not(:last-child) {
+        @apply flex w-full items-center text-blue-500 after:content-[''] after:w-full after:h-1 after:border-b after:border-gray-200 after:border-4 after:inline-block;
+    }
+    .stepper-form .tabs ol li:not(:last-child).active {
+        @apply after:border-blue-500;
+    }
+    .stepper-form .tabs ol li div {
+        @apply flex items-center justify-center w-16 md:w-24 h-16 md:h-24 bg-gray-100 rounded-lg shrink-0;
+    }
+    .stepper-form .tabs ol li div i {
+        @apply text-2xl md:text-5xl text-gray-400;
+    }
+    .stepper-form .tabs ol li.active div {
+        @apply bg-blue-500;
+    }
+    .stepper-form .tabs ol li.active div i {
+        @apply text-white;
+    }
+    .stepper {
+        @apply items-start sm:flex;
+    }
+    .stepper li {
+        @apply relative mb-6 sm:mb-0 flex-1;
+    }
+    .stepper li .progress {
+        @apply flex items-center;
+    }
+    .stepper li .description {
+        @apply mt-3 sm:pe-8;
+    }
+    .list-group {
+        @apply flex flex-col divide-y divide-gray-400;
+    }
+    .list-group-item {
+        @apply relative block py-3 px-5;
+    }
+    .bottom-menu {
+        @apply bg-white fixed bottom-0 left-0 right-0 z-[1030] text-center opacity-0 invisible transition-all duration-150 ease-in;
+    }
+    .bottom-menu.active {
+        @apply opacity-100 visible border-t-2 border-gray-300;
+    }
+    .bottom-menu ul {
+        @apply w-full max-w-[640px] flex flex-wrap mx-auto;
+    }
+    .bottom-menu ul li {
+        @apply w-1/4;
+    }
+    .bottom-menu ul li a {
+        @apply flex flex-col items-center justify-center gap-3 border-t-4 border-transparent p-4 pt-3 hover:bg-gray-100 hover:border-sky-600 transition-all duration-150 ease-in;
+    }
+    .bottom-menu ul li a span {
+        @apply text-gray-600 font-bmwBold text-xs;
+    }
+    .bottom-menu ul li a span img {
+        @apply h-5;
+    }
+    nav.active {
+        @apply bg-gray-50 shadow-sm;
+    }
+    nav.active .nav-header .nav-links {
+        @apply text-black/80;
+    }
+    nav div #pleasure {
+        @apply block;
+    }
+    nav.active div #pleasure {
+        @apply hidden;
+    }
+    .nav-header {
+        @apply font-medium flex flex-row max-sm:flex-col max-sm:divide-y;
+    }
+    .nav-header .nav-links {
+        @apply font-bmwBold px-6 py-[2.2rem] text-gray-100 border-b-4 border-transparent hover:border-sky-600 cursor-pointer transition-all duration-150 ease-out;
+    }
+    .table {
+        @apply w-full text-sm text-left rtl:text-right text-gray-500;
+    }
+    .table thead th {
+        @apply p-4 bg-gray-200 font-bmwBold text-base;
+    }
+    .table tbody td {
+        @apply py-2 px-4;
+    }
+    .table-striped tbody tr:nth-child(even) {
+        @apply bg-gray-100;
+    }
+    .buttons {
+        @apply flex items-center justify-center gap-2 font-bmwBold w-fit text-sm py-3 px-8 rounded-md bg-gray-500 text-white font-medium hover:bg-gray-700 transition duration-150 ease-in;
+    }
+    .buttons.blue {
+        @apply bg-[#1c69d4] hover:bg-[#1c69d4c3];
+    }
+    .buttons-outline {
+        @apply flex items-center justify-center gap-2 font-bmwBold w-fit py-3 px-8 rounded-md border-2 text-gray-100 border-gray-100 hover:bg-gray-500 hover:text-white transition duration-150 ease-in;
+    }
+    .form-control,
+    .form-select {
+        @apply bg-gray-50 border border-gray-400 text-gray-900 rounded-lg focus:ring-sky-500 focus:border-sky-500 block w-full p-3 focus:pl-4 text-sm dark:bg-gray-600 dark:text-gray-300 dark:border-0 dark:focus:ring-gray-300;
+        transition: all 0.25s ease-in;
+    }
+    .form-label {
+        @apply block mb-2 font-bmwRegular text-sm text-gray-900 cursor-pointer dark:text-gray-300;
+    }
+    .form-control.group {
+        @apply ps-12 focus:ps-12;
+    }
+    .form-checkbox {
+        @apply w-4 h-4 text-sky-500 bg-gray-100 border-gray-400 rounded focus:ring-sky-500 focus:ring-2 cursor-pointer;
+    }
+
+    /* swiper */
+    .swiper {
+        @apply w-full h-full;
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+        background-color: rgba(0, 0, 0, 0.3) !important;
+        border-radius: 50%;
+        width: 35px !important;
+        height: 35px !important;
+    }
+    .swiper-button-next:hover,
+    .swiper-button-prev:hover {
+        background-color: rgba(0, 0, 0, 0.7) !important;
+    }
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-size: 16px !important;
+        color: #fff !important;
+    }
+    /* swiper */
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="39px" height="32px" viewBox="0 0 39 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 57.1 (83088) - https://sketch.com -->
+    <title>ic_local_post_office</title>
+    <desc>Created with Sketch.</desc>
+    <g id="BMW-V3" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="contact-us" transform="translate(-904.000000, -421.000000)" fill="#F53631">
+            <g id="ic_local_post_office" transform="translate(904.000000, 421.000000)">
+                <g id="Icon-24px">
+                    <path d="M34.8636364,0.592592593 L4.13636364,0.592592593 C2.02386364,0.592592593 0.314659091,2.32592593 0.314659091,4.44444444 L0.295454545,27.5555556 C0.295454545,29.6740741 2.02386364,31.4074074 4.13636364,31.4074074 L34.8636364,31.4074074 C36.9761364,31.4074074 38.7045455,29.6740741 38.7045455,27.5555556 L38.7045455,4.44444444 C38.7045455,2.32592593 36.9761364,0.592592593 34.8636364,0.592592593 L34.8636364,0.592592593 Z M34.8636364,8.2962963 L19.5,17.9259259 L4.13636364,8.2962963 L4.13636364,4.44444444 L19.5,14.0740741 L34.8636364,4.44444444 L34.8636364,8.2962963 L34.8636364,8.2962963 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
